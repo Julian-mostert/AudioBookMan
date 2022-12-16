@@ -1,0 +1,3 @@
+[submodule "tone"]
+	path = tone
+	url = https://github.com/sandreas/tone.git
