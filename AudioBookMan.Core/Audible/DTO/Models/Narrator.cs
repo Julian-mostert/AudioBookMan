@@ -1,10 +1,11 @@
 ﻿using Newtonsoft.Json;
 
-namespace AudioBookMan.Core.Audible.DTO.Models
+namespace AudioBookMan.Core.Audible.DTO.Models;
+
+public class Narrator
 {
-    public class Narrator
-    {
-        [JsonProperty("name")]
-        public string Name;
-    }
+    [JsonProperty("name")]
+    public string Name;
 }
+
+

@@ -1,13 +1,14 @@
 ﻿using Newtonsoft.Json;
 
-namespace AudioBookMan.Core.Audible.DTO.Models
-{
-    public class SocialMediaImages
-    {
-        [JsonProperty("facebook")]
-        public string Facebook;
+namespace AudioBookMan.Core.Audible.DTO.Models;
 
-        [JsonProperty("twitter")]
-        public string Twitter;
-    }
+public class SocialMediaImages
+{
+    [JsonProperty("facebook")]
+    public string Facebook;
+
+    [JsonProperty("twitter")]
+    public string Twitter;
 }
+
+

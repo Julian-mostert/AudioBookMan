@@ -1,20 +1,21 @@
 ﻿using Newtonsoft.Json;
 
-namespace AudioBookMan.Core.Audible.DTO.Models;
+namespace AudioBookMan.Core.Audnexus.DTO.Models;
 
 public class Chapter
 {
-    [JsonProperty("length_ms")]
+    [JsonProperty("lengthMs")]
     public int LengthMs;
 
-    [JsonProperty("start_offset_ms")]
+    [JsonProperty("startOffsetMs")]
     public int StartOffsetMs;
 
-    [JsonProperty("start_offset_sec")]
+    [JsonProperty("startOffsetSec")]
     public int StartOffsetSec;
 
     [JsonProperty("title")]
     public string Title;
 }
+
 
 

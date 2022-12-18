@@ -1,82 +1,83 @@
 ﻿using Newtonsoft.Json;
 
-namespace AudioBookMan.Core.Audible.DTO.Models
+namespace AudioBookMan.Core.Audible.DTO.Models;
+
+public class Product
 {
-    public class Product
-    {
-        [JsonProperty("asin")]
-        public string Asin;
+    [JsonProperty("asin")]
+    public string Asin;
 
-        [JsonProperty("audible_editors_summary")]
-        public string AudibleEditorsSummary;
+    [JsonProperty("audible_editors_summary")]
+    public string AudibleEditorsSummary;
 
-        [JsonProperty("authors")]
-        public List<Author> Authors;
+    [JsonProperty("authors")]
+    public List<Author> Authors;
 
-        [JsonProperty("available_codecs")]
-        public List<AvailableCodec> AvailableCodecs;
+    [JsonProperty("available_codecs")]
+    public List<AvailableCodec> AvailableCodecs;
 
-        [JsonProperty("content_delivery_type")]
-        public string ContentDeliveryType;
+    [JsonProperty("content_delivery_type")]
+    public string ContentDeliveryType;
 
-        [JsonProperty("content_type")]
-        public string ContentType;
+    [JsonProperty("content_type")]
+    public string ContentType;
 
-        [JsonProperty("format_type")]
-        public string FormatType;
+    [JsonProperty("format_type")]
+    public string FormatType;
 
-        [JsonProperty("has_children")]
-        public bool HasChildren;
+    [JsonProperty("has_children")]
+    public bool HasChildren;
 
-        [JsonProperty("is_adult_product")]
-        public bool IsAdultProduct;
+    [JsonProperty("is_adult_product")]
+    public bool IsAdultProduct;
 
-        [JsonProperty("is_listenable")]
-        public bool IsListenable;
+    [JsonProperty("is_listenable")]
+    public bool IsListenable;
 
-        [JsonProperty("is_purchasability_suppressed")]
-        public bool IsPurchasabilitySuppressed;
+    [JsonProperty("is_purchasability_suppressed")]
+    public bool IsPurchasabilitySuppressed;
 
-        [JsonProperty("issue_date")]
-        public string IssueDate;
+    [JsonProperty("issue_date")]
+    public string IssueDate;
 
-        [JsonProperty("language")]
-        public string Language;
+    [JsonProperty("language")]
+    public string Language;
 
-        [JsonProperty("merchandising_summary")]
-        public string MerchandisingSummary;
+    [JsonProperty("merchandising_summary")]
+    public string MerchandisingSummary;
 
-        [JsonProperty("narrators")]
-        public List<Narrator> Narrators;
+    [JsonProperty("narrators")]
+    public List<Narrator> Narrators;
 
-        [JsonProperty("publication_name")]
-        public string PublicationName;
+    [JsonProperty("product_images")]
+    public ProductImages ProductImages;
 
-        [JsonProperty("publisher_name")]
-        public string PublisherName;
+    [JsonProperty("publication_name")]
+    public string PublicationName;
 
-        [JsonProperty("release_date")]
-        public string ReleaseDate;
+    [JsonProperty("publisher_name")]
+    public string PublisherName;
 
-        [JsonProperty("runtime_length_min")]
-        public int RuntimeLengthMin;
+    [JsonProperty("publisher_summary")]
+    public string PublisherSummary;
 
-        [JsonProperty("subtitle")]
-        public string Subtitle;
+    [JsonProperty("release_date")]
+    public string ReleaseDate;
 
-        [JsonProperty("thesaurus_subject_keywords")]
-        public List<string> ThesaurusSubjectKeywords;
+    [JsonProperty("runtime_length_min")]
+    public int RuntimeLengthMin;
 
-        [JsonProperty("title")]
-        public string Title;
+    [JsonProperty("social_media_images")]
+    public SocialMediaImages SocialMediaImages;
 
-        [JsonProperty("product_images")]
-        public ProductImages ProductImages;
+    [JsonProperty("subtitle")]
+    public string Subtitle;
 
-        [JsonProperty("publisher_summary")]
-        public string PublisherSummary;
+    [JsonProperty("thesaurus_subject_keywords")]
+    public List<string> ThesaurusSubjectKeywords;
 
-        [JsonProperty("social_media_images")]
-        public SocialMediaImages SocialMediaImages;
-    }
+    [JsonProperty("title")]
+    public string Title;
 }
+
+

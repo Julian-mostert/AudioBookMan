@@ -1,10 +1,10 @@
 ﻿using Flurl;
 
-namespace AudioBookMan.Core.Audible.API;
+namespace AudioBookMan.Core.Audnexus.API;
 
-public abstract class AudibleBase
+public abstract class AudnexusBase
 {
-    protected readonly Url BaseUrl = new("https://api.audible.com/1.0/");
+    protected readonly Url BaseUrl = new("https://api.audnex.us/");
 
     protected static string CreateAggregatedList( IEnumerable<string> groups )
     {
@@ -13,5 +13,6 @@ public abstract class AudibleBase
         return groupList.Remove(groupList.Length - 1);
     }
 }
+
 
 
