@@ -9,5 +9,3 @@ public class GetBookByIdRequest
     public UpdateType      Update      { get; set; } = UpdateType.Update;
     public RegionType      RegionType  { get; set; } = RegionType.Us;
 }
-
-

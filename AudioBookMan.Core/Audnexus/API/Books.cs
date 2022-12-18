@@ -15,7 +15,7 @@ public class Books : AudnexusBase
         this._audnexusAuthorProductUrl = this.BaseUrl.AppendPathSegments(ApiSection);
     }
 
-    public Task<FindAuthorByIdResponse> GetBooksById( GetBookByIdRequest request )
+    public Task<FindBookByIdResponse> GetBooksById( GetBookByIdRequest request )
     {
         Url callUrl = this._audnexusAuthorProductUrl.AppendPathSegment(request.ASIN).
                            SetQueryParams(
@@ -27,7 +27,21 @@ public class Books : AudnexusBase
                                           }
                                          );
 
-        return callUrl.GetJsonAsync<FindAuthorByIdResponse>();
+        return callUrl.GetJsonAsync<FindBookByIdResponse>();
+    }
+    
+    public Task<FindBookByIdResponse> GetBooksById( FindChaptersByAsinRequest request )
+    {
+        Url callUrl = this._audnexusAuthorProductUrl.AppendPathSegment(request.ASIN)
+                          .AppendPathSegment("chapters")
+                          .SetQueryParams(
+                                          new
+                                          {
+                                              update      = request.Update,
+                                              region      = request.RegionType
+                                          }
+                                         );
+
+        return callUrl.GetJsonAsync<FindBookByIdResponse>();
     }
 }
-

@@ -41,5 +41,13 @@ public class Authors : AudnexusBase
 
         return callUrl.GetJsonAsync<FindAuthorByIdResponse>();
     }
-}
 
+    public Task<FindAuthorByIdResponse> GetSearchAuthorByName( FindAuthorByNameRequest request )
+    {
+        Url callUrl = this._audnexusAuthorProductUrl
+                          .SetQueryParam("name", request.AuthorName, true).
+                           SetQueryParam("region", request.RegionType);
+
+        return callUrl.GetJsonAsync<FindAuthorByIdResponse>();
+    }
+}
