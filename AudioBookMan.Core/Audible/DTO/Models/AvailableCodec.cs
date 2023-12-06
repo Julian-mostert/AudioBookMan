@@ -5,16 +5,16 @@ namespace AudioBookMan.Core.Audible.DTO.Models;
 public class AvailableCodec
 {
     [JsonProperty("enhanced_codec")]
-    public string EnhancedCodec;
+    public string EnhancedCodec = string.Empty;
 
     [JsonProperty("format")]
-    public string Format;
+    public string Format = string.Empty;
 
     [JsonProperty("is_kindle_enhanced")]
     public bool IsKindleEnhanced;
 
     [JsonProperty("name")]
-    public string Name;
+    public string Name = string.Empty;
 }
 
 
